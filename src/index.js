@@ -13,7 +13,7 @@ db.connect();
 
 // Use static folder
 app.use(express.static(path.join(__dirname, 'public')));
-console.log(path.join(__dirname, 'public'))
+//console.log(path.join(__dirname, 'public'))
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -22,8 +22,8 @@ app.use(express.json());
 //app.use(morgan('combined'))
 
 //template engine
-        app.engine('.hbs', handlebars({ extname: '.hbs' }));
-  app.set('view engine', 'hbs');
+app.engine('.hbs', handlebars({ extname: '.hbs' }));
+app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources', 'views'));
 
 //Route init
